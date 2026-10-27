@@ -7,28 +7,34 @@
     <link href="Tailwind/output.css" rel="stylesheet">
     <script src="app.js" defer></script>
     <script src="saving.js" defer></script>
+    <script src="presets.js" defer></script>
 </head>
 <body class="bg-gray-950 flex flex-col p-20">
-    <h1 class="text-slate-300 text-5xl">Notem</h1>
+    <h1 class="text-slate-300 text-5xl">NoteLi</h1>
     <h2 class="text-slate-500 text-1xl mt-1">Fast, Web-based Text Editor. No download needed</h2>
     <hr class="h-px border-0 bg-gray-700 my-5">
     <input id="name-field" placeholder="File Name..."class="selection:bg-gray-500 resize-none bg-gray-900 p-5 w-full text-slate-300 border-2 rounded-3xl border-gray-800 h-full mt-4 outline-0">
     <!-- editor bits -->
     <div class="min-h-250 pt-5 min-w-full">
         <!-- top bar -->
-        <div class="flex gap-5">
+        <div class="flex gap-5 flex-row">
             <button id="download" class="bg-purple-500 cursor-pointer p-2 min-w-40 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']">Download (.txt)</button>
+            <button id="draft" class="bg-orange-500 cursor-pointer p-2 min-w-40 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']">Save Draft</button>
             <button id="reset" class="bg-blue-600 cursor-pointer p-2 min-w-40 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']">Reset</button>
             <button id="copy" class="bg-blue-600 cursor-pointer p-2 min-w-40 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']"">Copy</button>
+             
         </div>
         <textarea autofocus id="text" class="selection:bg-gray-500 resize-none bg-gray-900 p-5 w-full text-slate-300 border-2 rounded-3xl border-gray-800 h-full mt-4 outline-0"></textarea>
     </div>
-    <div id="popup"class="p-5 flex-col items-center justify-center text-center bg-gray-950 w-1/8 absolute right-30 top-30 border-2 border-gray-800 rounded-3xl">
-        <h1 class="text-slate-300 text-2xl">Restore Last Saved File?</h1>
+    <div id="popupSave"class="p-5 flex-col items-center justify-center text-center bg-gray-950 w-1/8 absolute right-30 top-30 border-2 border-gray-800 rounded-3xl">
+        <h1 class="text-slate-300 text-2xl z-100">Restore Last Saved File?</h1>
         <div class="flex flex-col grow-0">
             <button id="responsey" class="bg-purple-500 mt-2 cursor-pointer p-2 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']">Yes</button>
             <button id="responsen" class="bg-blue-600 mt-2 cursor-pointer p-2 hover:scale-95 transition: duration-100 ease-in-out rounded-3xl text-slate-200 font-['consolas']">No</button>
         </div>
     </div>
+     <div id="popupPreset"class="p-5 flex-col items-center justify-center text-center bg-gray-950 w-1/8 absolute right-30 top-30 border-2 border-gray-800 rounded-3xl">
+
+     </div>
 </body>
 </html>

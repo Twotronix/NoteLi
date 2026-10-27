@@ -12,6 +12,7 @@ reset.addEventListener("click", () => {
     text.value = ""
 })
 
+
 copy.addEventListener("click", () => {
     const copyable = getText()
     navigator.clipboard.writeText(copyable)
